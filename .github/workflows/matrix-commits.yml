@@ -2,8 +2,7 @@ name: Matrix Commit Pattern
 
 on:
   schedule:
-    # Executa o workflow uma vez por dia
-    - cron: '0 20 * * *'
+    - cron: '20 20 * * *'  # Executa às 20:20 UTC todos os dias
 
 jobs:
   make-commits:
@@ -15,15 +14,16 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.email "jcpaduatimoteo09@gmail.com"
-          git config --global user.name "j0a0cesar"
+          git config --global user.email "jcpaduatimoteo09@gmail.com"  # Insira seu e-mail do GitHub
+          git config --global user.name "j0a0cesar"  # Insira seu nome de usuário do GitHub
 
       - name: Make commits
         run: |
-          # Faça 5 commits por dia para criar um padrão no gráfico
+          # Faz 2 commits por dia
           for i in {1..2}; do
             echo "$RANDOM" > file.txt
             git add file.txt
             git commit -m "Matrix Commit $i"
           done
           git push
+
