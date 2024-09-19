@@ -3,7 +3,7 @@ Estudante de Ciência da Computação
 
 <div> 
   <a href="https://github.com/j0a0cesar">
-  <img height ="150cm" src="https://github-readme-stats.vercel.app/api?username=j0a0cesar&show_icons=true&theme=dark"/>
+  <img height ="150cm" src="https://github-readme-stats.vercel.app/api?username=j0a0cesar&show_icons=true&theme=dark"/> <br>
   <img height="150cm" src="https://github-readme-stats.vercel.app/api/top-langs/?username=j0a0cesar&langs_count=8&theme=dark"/>
 </div>
 
