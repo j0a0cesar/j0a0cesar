@@ -1,0 +1,29 @@
+name: Matrix Commit Pattern
+
+on:
+  schedule:
+    # Executa o workflow uma vez por dia
+    - cron: '0 20 * * *'
+
+jobs:
+  make-commits:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "jcpaduatimoteo09@gmail.com"
+          git config --global user.name "j0a0cesar"
+
+      - name: Make commits
+        run: |
+          # Faça 5 commits por dia para criar um padrão no gráfico
+          for i in {1..2}; do
+            echo "$RANDOM" > file.txt
+            git add file.txt
+            git commit -m "Matrix Commit $i"
+          done
+          git push
